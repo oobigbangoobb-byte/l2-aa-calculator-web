@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Lineage 2 Ancient Adena Calculator | Online Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="Online Ancient Adena Calculator for Lineage 2 players. Supports Official and Custom Server seal stone rates (Red, Green, Blue) with instant AA calculation."
+    />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="app-container">
+        <!-- Banner -->
+        <header class="banner">
+            <img src="img/AA_Banner_Logo.png" alt="Ancient Adena Calculator Banner" />
+        </header>
+
+        <!-- Main layout -->
+        <main class="main-layout">
+            <!-- Left: Seal Stones -->
+            <section class="panel panel-left">
+                <h2 class="panel-title">Seal Stones</h2>
+
+                <div class="table-header">
+                    <span class="cell cell-icon">Icon</span>
+                    <span class="cell cell-stone">Stone</span>
+                    <span class="cell cell-qty">Quantity</span>
+                    <span class="cell cell-rate">AA / Stone</span>
+                    <span class="cell cell-total">AA Total</span>
+                </div>
+
+                <!-- Red row -->
+                <div class="table-row">
+                    <span class="cell cell-icon">
+                        <!-- optional icon later -->
+                        <!-- <img src="img/seal_red.png" alt="Red Seal Stone"> -->
+                    </span>
+                    <span class="cell cell-stone">Red Seal Stone</span>
+                    <span class="cell cell-qty">
+                        <input type="number" id="qty-red" value="0" min="0" />
+                    </span>
+                    <span class="cell cell-rate" id="rate-red">10</span>
+                    <span class="cell cell-total" id="total-red">0</span>
+                </div>
+
+                <!-- Green row -->
+                <div class="table-row">
+                    <span class="cell cell-icon">
+                        <!-- <img src="img/seal_green.png" alt="Green Seal Stone"> -->
+                    </span>
+                    <span class="cell cell-stone">Green Seal Stone</span>
+                    <span class="cell cell-qty">
+                        <input type="number" id="qty-green" value="0" min="0" />
+                    </span>
+                    <span class="cell cell-rate" id="rate-green">5</span>
+                    <span class="cell cell-total" id="total-green">0</span>
+                </div>
+
+                <!-- Blue row -->
+                <div class="table-row">
+                    <span class="cell cell-icon">
+                        <!-- <img src="img/seal_blue.png" alt="Blue Seal Stone"> -->
+                    </span>
+                    <span class="cell cell-stone">Blue Seal Stone</span>
+                    <span class="cell cell-qty">
+                        <input type="number" id="qty-blue" value="0" min="0" />
+                    </span>
+                    <span class="cell cell-rate" id="rate-blue">3</span>
+                    <span class="cell cell-total" id="total-blue">0</span>
+                </div>
+
+                <div class="buttons-row">
+                    <button id="btn-calc">Calculate</button>
+                    <button id="btn-reset">Reset</button>
+                </div>
+            </section>
+
+            <!-- Right: Category, Custom rates, Result, How to use -->
+            <section class="panel panel-right">
+                <!-- Category / Profile -->
+                <section class="subpanel">
+                    <h2 class="panel-title">Category</h2>
+                    <div class="field-row">
+                        <label for="category">Select:</label>
+                        <select id="category">
+                            <option value="Official">Official</option>
+                            <option value="Custom">Custom Server</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Custom rates -->
+                <section class="subpanel">
+                    <h2 class="panel-title">Stone Rates</h2>
+                    <div class="field-row">
+                        <span class="rate-label">AA per Blue Stone:</span>
+                        <input type="number" id="rate-blue-custom" value="3" min="0" step="0.01" />
+                    </div>
+                    <div class="field-row">
+                        <span class="rate-label">AA per Green Stone:</span>
+                        <input type="number" id="rate-green-custom" value="5" min="0" step="0.01" />
+                    </div>
+                    <div class="field-row">
+                        <span class="rate-label">AA per Red Stone:</span>
+                        <input type="number" id="rate-red-custom" value="10" min="0" step="0.01" />
+                    </div>
+                </section>
+
+                <!-- Result -->
+                <section class="subpanel">
+                    <h2 class="panel-title">Result</h2>
+                    <div class="result-row">
+                        <span>Total Ancient Adena:</span>
+                        <span id="total-aa" class="result-value">0</span>
+                    </div>
+                </section>
+
+                <!-- How to Use -->
+                <section class="subpanel">
+                    <h2 class="panel-title">How to Use</h2>
+                    <div class="howto-text">
+                        <p>1. Choose a category: Official or Custom Server.</p>
+                        <p>2. Enter quantities for Red, Green and Blue seal stones.</p>
+                        <p>3. If using Custom Server, set AA per stone in the Stone Rates section.</p>
+                        <p>4. Click <strong>Calculate</strong> to see total Ancient Adena.</p>
+                        <p>5. Click <strong>Reset</strong> to clear all quantities and results.</p>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>Fan-made tool for Lineage II players. Unofficial, not affiliated with NCSoft.</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
